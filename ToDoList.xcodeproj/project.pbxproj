@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0910DD8227AEF2FC0037EC61 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0910DD8127AEF2FC0037EC61 /* ListViewModel.swift */; };
 		09CB78D227AD7B9600870197 /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CB78D127AD7B9600870197 /* AddTaskView.swift */; };
 		09CB78D527ADBEC700870197 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CB78D427ADBEC700870197 /* TaskModel.swift */; };
 		09F101E427AD71D500D741F3 /* ToDoListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F101E327AD71D500D741F3 /* ToDoListApp.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0910DD8127AEF2FC0037EC61 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		09CB78D127AD7B9600870197 /* AddTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
 		09CB78D427ADBEC700870197 /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
 		09F101E027AD71D500D741F3 /* ToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,6 +40,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0910DD8027AEF29D0037EC61 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0910DD8127AEF2FC0037EC61 /* ListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		09CB78D327ADBEB300870197 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				09CB78D327ADBEB300870197 /* Models */,
+				0910DD8027AEF29D0037EC61 /* ViewModel */,
 				09F101F127AD71EB00D741F3 /* views */,
 				09F101E327AD71D500D741F3 /* ToDoListApp.swift */,
 				09F101E727AD71D600D741F3 /* Assets.xcassets */,
@@ -164,6 +175,7 @@
 			files = (
 				09F101E427AD71D500D741F3 /* ToDoListApp.swift in Sources */,
 				09F101F327AD727000D741F3 /* ListView.swift in Sources */,
+				0910DD8227AEF2FC0037EC61 /* ListViewModel.swift in Sources */,
 				09CB78D527ADBEC700870197 /* TaskModel.swift in Sources */,
 				09F101F527AD749000D741F3 /* ListRowView.swift in Sources */,
 				09CB78D227AD7B9600870197 /* AddTaskView.swift in Sources */,

@@ -8,8 +8,12 @@
 import SwiftUI
 
 struct AddTaskView: View {
-    
+    @Environment(\.presentationMode)var presentationMode
+    @EnvironmentObject var listViewModel:ListViewModel
     @State var textFieldText:String=""
+    
+    @State var alertTitle:String=""
+    @State var showAlert:Bool=false
     
     var body: some View {
         ScrollView{
@@ -20,7 +24,7 @@ struct AddTaskView: View {
                     .background(Color.gray.opacity(0.3))
                     .cornerRadius(10)
                     .font(.title)
-                Button(action:{},
+                Button(action:saveButton,
                        label: {
                     Text("SAVE")
                         .foregroundColor(.white)
@@ -35,7 +39,29 @@ struct AddTaskView: View {
                 
         }
         .navigationTitle("Add new Task 🖋")
+        .alert(isPresented: $showAlert , content: getAlert)
     }
+    
+    func saveButton(){
+        if textChecker(){
+        listViewModel.addTask(title: textFieldText)
+        presentationMode.wrappedValue.dismiss()
+       }
+    }
+    
+    func textChecker()->Bool{
+        if(textFieldText.count<3){
+            alertTitle="Enter at least 3 characters"
+            showAlert.toggle()
+            return false
+        }
+        return true
+    }
+    
+    func getAlert()->Alert{
+        return Alert(title: Text(alertTitle))
+    }
+    
 }
 
 struct AddTaskView_Previews: PreviewProvider {
@@ -43,5 +69,6 @@ struct AddTaskView_Previews: PreviewProvider {
         NavigationView{
         AddTaskView()
         }
+        .environmentObject(ListViewModel())
     }
 }
