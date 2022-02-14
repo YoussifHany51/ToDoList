@@ -29,8 +29,8 @@ class ListViewModel: ObservableObject{
         self.items = savedTasks
     }
     
-    func addTask(title:String){
-        let newTask=TaskModel(title: title, isCompleted: false)
+    func addTask(title:String,priorityOption:String,date:Date){
+        let newTask=TaskModel(title: title, isCompleted: false,priorityOption: priorityOption,date: date)
         items.append(newTask)
     }
     
