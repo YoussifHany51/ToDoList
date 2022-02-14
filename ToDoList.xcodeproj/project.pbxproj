@@ -7,7 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09108EDD27B55E4800AC8B3A /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09108EDC27B55E4800AC8B3A /* SoundManager.swift */; };
+		09108EE627B57FF800AC8B3A /* ding.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 09108EE527B57FF800AC8B3A /* ding.mp3 */; };
 		0910DD8227AEF2FC0037EC61 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0910DD8127AEF2FC0037EC61 /* ListViewModel.swift */; };
+		092D251A27B2AFD5008751AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 092D251927B2AFD5008751AA /* LaunchScreen.storyboard */; };
+		0967FF5027B317B5002C6311 /* localNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0967FF4F27B317B5002C6311 /* localNotification.swift */; };
+		0996750927B283F000FD3F4E /* NoTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0996750827B283F000FD3F4E /* NoTasks.swift */; };
 		09CB78D227AD7B9600870197 /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CB78D127AD7B9600870197 /* AddTaskView.swift */; };
 		09CB78D527ADBEC700870197 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CB78D427ADBEC700870197 /* TaskModel.swift */; };
 		09F101E427AD71D500D741F3 /* ToDoListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F101E327AD71D500D741F3 /* ToDoListApp.swift */; };
@@ -18,7 +23,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		09108EDC27B55E4800AC8B3A /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
+		09108EE527B57FF800AC8B3A /* ding.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ding.mp3; sourceTree = "<group>"; };
 		0910DD8127AEF2FC0037EC61 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		092D251927B2AFD5008751AA /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0967FF4F27B317B5002C6311 /* localNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = localNotification.swift; sourceTree = "<group>"; };
+		0996750827B283F000FD3F4E /* NoTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoTasks.swift; sourceTree = "<group>"; };
 		09CB78D127AD7B9600870197 /* AddTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
 		09CB78D427ADBEC700870197 /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
 		09F101E027AD71D500D741F3 /* ToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,6 +50,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09108EDE27B57EB100AC8B3A /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				09108EE527B57FF800AC8B3A /* ding.mp3 */,
+			);
+			path = Sound;
+			sourceTree = "<group>";
+		};
 		0910DD8027AEF29D0037EC61 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -52,6 +70,8 @@
 			isa = PBXGroup;
 			children = (
 				09CB78D427ADBEC700870197 /* TaskModel.swift */,
+				0967FF4F27B317B5002C6311 /* localNotification.swift */,
+				09108EDC27B55E4800AC8B3A /* SoundManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -75,6 +95,7 @@
 		09F101E227AD71D500D741F3 /* ToDoList */ = {
 			isa = PBXGroup;
 			children = (
+				09108EDE27B57EB100AC8B3A /* Sound */,
 				09CB78D327ADBEB300870197 /* Models */,
 				0910DD8027AEF29D0037EC61 /* ViewModel */,
 				09F101F127AD71EB00D741F3 /* views */,
@@ -99,6 +120,8 @@
 				09F101F227AD727000D741F3 /* ListView.swift */,
 				09F101F427AD749000D741F3 /* ListRowView.swift */,
 				09CB78D127AD7B9600870197 /* AddTaskView.swift */,
+				0996750827B283F000FD3F4E /* NoTasks.swift */,
+				092D251927B2AFD5008751AA /* LaunchScreen.storyboard */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -161,6 +184,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09108EE627B57FF800AC8B3A /* ding.mp3 in Resources */,
+				092D251A27B2AFD5008751AA /* LaunchScreen.storyboard in Resources */,
 				09F101EB27AD71D600D741F3 /* Preview Assets.xcassets in Resources */,
 				09F101E827AD71D600D741F3 /* Assets.xcassets in Resources */,
 			);
@@ -174,11 +199,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				09F101E427AD71D500D741F3 /* ToDoListApp.swift in Sources */,
+				0996750927B283F000FD3F4E /* NoTasks.swift in Sources */,
 				09F101F327AD727000D741F3 /* ListView.swift in Sources */,
 				0910DD8227AEF2FC0037EC61 /* ListViewModel.swift in Sources */,
+				0967FF5027B317B5002C6311 /* localNotification.swift in Sources */,
 				09CB78D527ADBEC700870197 /* TaskModel.swift in Sources */,
 				09F101F527AD749000D741F3 /* ListRowView.swift in Sources */,
 				09CB78D227AD7B9600870197 /* AddTaskView.swift in Sources */,
+				09108EDD27B55E4800AC8B3A /* SoundManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,8 +343,10 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -326,7 +356,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -344,8 +374,10 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -355,7 +387,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
