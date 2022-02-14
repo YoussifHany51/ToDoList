@@ -8,28 +8,46 @@
 import SwiftUI
 
 struct ListView: View {
+    
     @EnvironmentObject var listViewModel : ListViewModel
-   
+    
+    init(){
+        NotificationManager.instance.requstAuthorization()
+    }
+    
     var body: some View {
-        List{
-            ForEach(listViewModel.items){item in
-                ListRowView(task: item)
-                    .onTapGesture {
-                        withAnimation(.linear){
-                            listViewModel.updateTask(task: item)
-                        }
-                    }
+        ZStack{
+            if listViewModel.items.isEmpty{
+                NoTasksView()
+                    .transition(AnyTransition.opacity.animation(.easeIn))
             }
-            .onDelete(perform: listViewModel.deleteTask)
-            .onMove(perform: listViewModel.moveTask)
+            else {
+                List{
+                    ForEach(listViewModel.items){item in
+                        ListRowView(task: item)
+                            .onTapGesture {
+                                withAnimation(.linear){
+                                    listViewModel.updateTask(task: item)
+                                }
+                                SoundManager.instance.playSound()
+                            }
+                    }
+                    .onDelete(perform: listViewModel.deleteTask)
+                    .onMove(perform: listViewModel.moveTask)
+                }
+                .listStyle(PlainListStyle())
+            }
         }
-        .listStyle(PlainListStyle())
+        .onAppear{
+            UIApplication.shared.applicationIconBadgeNumber = 0
+        }
         .navigationTitle("ToDo List 📝")
         .navigationBarItems(leading: EditButton(),
                             trailing:
                                 NavigationLink("Add",
                                 destination: AddTaskView()) )
     }
+
 }
 struct ListView_Previews: PreviewProvider {
     static var previews: some View {
